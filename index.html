@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金铲铲之战 - 官方正版策略自走棋</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 页面背景 */
+        body {
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* 导航栏 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        .download-btn {
+            background: linear-gradient(90deg, #ff6b6b, #ffcc00);
+            padding: 10px 25px;
+            border-radius: 30px;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.08);
+        }
+
+        /* 英雄轮播区 */
+        .banner {
+            margin-top: 90px;
+            height: 85vh;
+            background: url('https://pic.178.com/news/202108/20210818114207714.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .banner h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255,204,0,0.5);
+        }
+
+        .banner p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* 游戏特色 */
+        .features {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #ffcc00;
+        }
+
+        .feature-box {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            width: 300px;
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,204,0,0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin: 15px 0;
+            color: #ffcc00;
+        }
+
+        /* 赛季介绍 */
+        .season {
+            padding: 80px 5%;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .season-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .season-img {
+            width: 500px;
+            border-radius: 15px;
+        }
+
+        .season-text {
+            max-width: 600px;
+        }
+
+        .season-text h2 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        /* 底部 */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* 响应式适配手机 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .banner h1 {
+                font-size: 32px;
+            }
+            .season-img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav>
+    <img src="https://game.gtimg.cn/images/lol/act/a20210810jlcz/logo.png" alt="金铲铲之战" class="logo">
+    <div class="nav-links">
+        <a href="#">首页</a>
+        <a href="#">英雄</a>
+        <a href="#">赛季</a>
+        <a href="#">攻略</a>
+        <a href="#">新闻</a>
+    </div>
+    <a href="#" class="download-btn">立即下载</a>
+</nav>
+
+<!-- 轮播banner -->
+<div class="banner">
+    <div class="banner-content">
+        <h1>金铲铲之战</h1>
+        <p>英雄联盟官方正版自走棋手游，指尖策略，轻松对弈！<br>汇聚海量英雄，自由搭配阵容，随时随地开启脑力对决。</p>
+        <a href="#" class="download-btn">即刻开战</a>
+    </div>
+</div>
+
+<!-- 游戏特色 -->
+<div class="features">
+    <h2 class="section-title">游戏特色</h2>
+    <div class="feature-box">
+        <div class="feature-card">
+            <h3>策略至上</h3>
+            <p>百种英雄羁绊，自由搭配阵容，用智慧战胜对手。</p>
+        </div>
+        <div class="feature-card">
+            <h3>轻松上手</h3>
+            <p>三分钟上手，十分钟一局，碎片化时间轻松娱乐。</p>
+        </div>
+        <div class="feature-card">
+            <h3>公平竞技</h3>
+            <p>纯策略对战，无属性加成，公平对决实力说话。</p>
+        </div>
+        <div class="feature-card">
+            <h3>赛季更新</h3>
+            <p>定期推出全新赛季，新英雄新羁绊持续更新。</p>
+        </div>
+    </div>
+</div>
+
+<!-- 赛季介绍 -->
+<div class="season">
+    <h2 class="section-title">最新赛季</h2>
+    <div class="season-content">
+        <img src="https://img.nga.178.com/attachments/mon_202501/17/-zuehf6Q24-j4q9Z19T3cSu0-1hc0.jpg" alt="赛季海报" class="season-img">
+        <div class="season-text">
+            <h2>魔法大乱斗 全新开启</h2>
+            <p style="font-size: 17px; line-height: 1.8;">
+                全新赛季带来超多魔法系英雄，专属羁绊效果炸裂，画面全面升级！<br>
+                新增数十张英雄卡牌，全新机制玩法，更刺激的对战体验！<br>
+                登录即领赛季奖励，限定头像框、英雄皮肤免费拿！
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- 底部 -->
+<footer>
+    <p>© 2026 腾讯游戏 金铲铲之战 版权所有</p>
+    <p>本网页为演示版本，非官方页面</p>
+</footer>
+
+</body>
+</html>
